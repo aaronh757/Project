@@ -165,6 +165,50 @@ rotation="0 0 0"
 radius="0.5"
 height="0.5"
 ></a-cylinder>
+<a-asset-item 
+ id="brain" 
+ src="assets\brain.glb"
+>
+</a-asset-item>
+<a-asset-item 
+ id="door" 
+ src="assets\door.glb"
+>
+</a-asset-item>
+<a-asset-item
+id="flask"
+src="assets/flask.glb"
+></a-asset-item>
+<a-asset-item
+id="skeleton"
+src="assets/skeleton.glb"
+></a-asset-item>
+<a-entity
+ gltf-model="#door"
+ position="-1 0 -6"
+ rotation="0 70 0"
+ scale="2.5 2.5 2.5"
+>
+</a-entity>
+<a-entity
+ gltf-model="#skeleton"
+ position="3 1.7 -15"
+ rotation="0 0 0"
+ scale="0.04 0.04 0.04"
+>
+</a-entity>
+<a-entity
+gltf-model="#flask"
+position="4 0.8 -13"
+rotation="0 0 0"
+scale="0.03 0.03 0.03"
+></a-entity>
+<a-entity
+gltf-model="#brain"
+position="-3.8 0.8 -13"
+rotation="0 0 0"
+scale="0.003 0.003 0.003"
+></a-entity>
         </a-scene>
     </body>
     </html>
