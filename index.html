@@ -7,17 +7,81 @@
         </head>
     <body>
         <a-scene>
+            <a-assets>
+            <img
+            id="terra-base"
+            src="assets/Terracotta_Floor_Tiles_003_basecolor.png"
+            >
+            <img
+            id="terra-ambient-occlusion"
+            src="assets/Terracotta_Floor_Tiles_003_ambientOcclusion.png"
+            >
+            <img
+            id="terra-normal"
+            src="assets/Terracotta_Floor_Tiles_003_normal.png"
+            >
+            <img
+            id="tiles-base"
+            src="assets/Tiles_067_basecolor.png"
+            >
+            <img
+            id="tiles-ambient-occlusion"
+            src="assets/Tiles_067_ambientOcclusion.png"
+            >
+            <img
+            id="tiles-normal"
+            src="assets/Tiles_067_normal.png"
+            >
+            <img
+            id="wood-base"
+            src="Wood_Floor_015_basecolor.png"
+            >
+            <img
+            id="wood-ambient-occlusion"
+            src="Wood_Floor_015_ambientOcclusion"
+            >
+            <img
+            id="wood-normal"
+            src="Wood_Floor_015_normal.png"
+            >
+            <img 
+ 
+            id="grass-base" 
+ src="assets\Grass_005_BaseColor.jpeg"
+ >
+ <img
+ id="grass-ambient-occlusion" 
+ src="assets\Grass_005_AmbientOcclusion.jpeg"
+ >
+ <img 
+ id="grass-normal"
+ src="assets\Grass_005_Normal.jpeg"
+ >
+ <img
+ >
+            </a-assets>
         <a-sky
         color="lightskyblue"
       >
       </a-sky>
             <a-mixin
-                id="wallcolor"
-                color="lightsteelblue"
+               id= "wallcolor"
+               material="src: #tiles-base;
+               repeat: 5 5;
+               ambientOcclusionMap: #tiles-ambient-occlusion;
+               ambientOcclusionTextureRepeat: 5 5;
+               normalMap: #tiles-normal;
+               normalTextureRepeat: 5 5"
             >
             </a-mixin>
     <a-plane
-     color="green"
+     material=
+ "src: #grass-base;
+ repeat: 500 500;
+ ambientOcclusionMap: #grass-ambient-occlusion;
+ ambientOcclusionTextureRepeat: 500 500;
+ normalMap: #grass-normal;
+ normalTextureRepeat: 500 500"
        position="0 0 0"
        rotation="-90 0 0"
        width="500"
@@ -110,7 +174,12 @@ height="0.25"
 >
 </a-box>
 <a-box
-color="darkgoldenrod"
+material="src: #terra-base;
+               repeat: 5 5;
+               ambientOcclusionMap: #terra-ambient-occlusion;
+               ambientOcclusionTextureRepeat: 5 5;
+               normalMap: #terra-normal;
+               normalTextureRepeat: 5 5"
 position="-3 0.7 -13"
 width="3"
 depth="1"
@@ -131,7 +200,12 @@ height="1"
 depth="0.1"
 ></a-box>
 <a-box
-color="darkgoldenrod"
+material="src: #terra-base;
+               repeat: 5 5;
+               ambientOcclusionMap: #terra-ambient-occlusion;
+               ambientOcclusionTextureRepeat: 5 5;
+               normalMap: #terra-normal;
+               normalTextureRepeat: 5 5"
 position="3 0.7 -13"
 width="3"
 depth="1"
@@ -183,6 +257,10 @@ src="assets/flask.glb"
 id="skeleton"
 src="assets/skeleton.glb"
 ></a-asset-item>
+<a-asset-item
+id="tubes"
+src="assets/tubes.glb"
+></a-asset-item>
 <a-entity
  gltf-model="#door"
  position="-1 0 -6"
@@ -208,6 +286,12 @@ gltf-model="#brain"
 position="-3.8 0.8 -13"
 rotation="0 0 0"
 scale="0.003 0.003 0.003"
+></a-entity>
+<a-entity
+gltf-model="#tubes"
+position="3.3 1 -13"
+rotation="0 0 0"
+scale="0.7 0.7 0.7"
 ></a-entity>
         </a-scene>
     </body>
