@@ -4,6 +4,10 @@
             <title>Project - [Aaron Henning]</title>
                  <script src="https://aframe.io/releases/1.7.0/aframe.min.js">
  </script>
+ <script src=
+"https://wsause.github.io/sause-extras/navigation.js">
+ </script>
+
         </head>
     <body>
         <a-scene>
@@ -110,6 +114,7 @@ rotation="0 0 0"
 width="10"
 height="3"
 depth="0.1"
+class="collidable"
 >
 </a-box>
 <a-box
@@ -119,6 +124,7 @@ rotation="0 90 0"
 width="10"
 height="3"
 depth="0.1"
+class="collidable"
 >
 </a-box>
 <a-box
@@ -128,6 +134,7 @@ rotation="0 90 0"
 width="10"
 height="3"
 depth="0.1"
+class="collidable"
 >
 </a-box>
 <a-box
@@ -137,6 +144,7 @@ rotation="0 0 0"
 width="4.25"
 height="3"
 depth="0.1"
+class="collidable"
 >
 </a-box>
 <a-box
@@ -146,6 +154,7 @@ rotation="0 0 0"
 width="4.25"
 height="3"
 depth="0.1"
+class="collidable"
 >
 </a-box>
 <a-box
@@ -155,6 +164,7 @@ rotation="0 0 0"
 width="1.5"
 height="0.5"
 depth="0.1"
+class="collidable"
 >
 </a-box>
 <a-box
@@ -184,6 +194,7 @@ position="-3 0.7 -13"
 width="3"
 depth="1"
 height="0.3"
+class="collidable"
 ></a-box>
 <a-box
 color="darkgoldenrod"
@@ -210,6 +221,7 @@ position="3 0.7 -13"
 width="3"
 depth="1"
 height="0.3"
+class="collidable"
 ></a-box>
 <a-box
 color="darkgoldenrod"
@@ -231,6 +243,7 @@ position="3.1 0.3 -12"
 rotation="0 0 0"
 radius="0.5"
 height="0.5"
+class="collidable"
 ></a-cylinder>
 <a-cylinder
 color="darksalmon"
@@ -238,6 +251,7 @@ position="-3.1 0.3 -12"
 rotation="0 0 0"
 radius="0.5"
 height="0.5"
+class="collidable"
 ></a-cylinder>
 <a-asset-item 
  id="brain" 
@@ -293,6 +307,90 @@ position="3.3 1 -13"
 rotation="0 0 0"
 scale="0.7 0.7 0.7"
 ></a-entity>
+<a-entity 
+ id="rig" 
+ navigation
+ >
+<a-entity
+ id="waist-raycaster-front"
+ raycaster=
+ "objects: .collidable; 
+ showLine: false; 
+ far: 0.1" 
+ position="0 1 0"
+>
+</a-entity>
+<a-entity 
+ id="head-raycaster-front"
+ raycaster=
+ "objects: .collidable; 
+ showLine: false; 
+ far: 0.1" 
+ position="0 1.6 0"
+>
+</a-entity>
+<a-entity 
+ id="knees-raycaster-front"
+ raycaster="objects: .collidable; 
+ showLine: false; far: 0."
+ position="0 0.5 0"
+>
+</a-entity>
+<a-entity 
+ id="waist-raycaster-back"
+ raycaster=
+ "objects: .collidable; 
+ showLine: false; 
+ far: 0.1; 
+ direction: 0 0 1" 
+ position="0 1 0"
+>
+</a-entity>
+<a-entity 
+ id="head-raycaster-back"
+ raycaster="objects: .collidable; 
+ showLine: false; 
+ far: 0.1; 
+ direction: 0 0 1" 
+ position="0 1.6 0"
+>
+</a-entity>
+<a-entity 
+ id="knees-raycaster-back"
+ raycaster="objects: .collidable; 
+ showLine: false; 
+ far: 0.1; 
+ direction: 0 0 1" 
+ position="0 0.5 0"
+>
+</a-entity>
+<a-entity 
+ id="feet-raycaster"
+ raycaster="objects: .collidable; 
+ showLine: false; 
+ far: 5; 
+ direction: 0 -1 0" 
+ position="0 0.45 0"
+>
+</a-entity>
+>
+<a-camera 
+ id="camera"
+ wasd-controls="enabled: false"
+ look-controls="enabled: false"
+ >
+ </a-camera>
+ <a-entity 
+ id="right-hand" 
+ laser-controls="hand: right"
+ >
+ </a-entity>
+ <a-entity 
+ id="left-hand" 
+ laser-controls="hand: left"
+ >
+ </a-entity>
+ </a-entity>
         </a-scene>
     </body>
     </html>
